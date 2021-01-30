@@ -7,4 +7,8 @@
 
 This is a test web application. This is developed as part of learning RESTful web services using Spring Boot.
 This project is cloned from example project on Sprint Boot: https://github.com/spring-guides/gs-spring-boot and 
-extended as example web application. 
+extended as example web application.
+
+This is just an example application which gets Time Series data from https://www.alphavantage.co for a given stock scrip. This has been developed just for learning purpose.
+
+
