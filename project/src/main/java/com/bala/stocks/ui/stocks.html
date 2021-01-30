@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Angular JS Includes</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+<h2>Stock Market</h2>
+<div ng-app="" ng-controller="studentController">
+
+
+    <p>Company Name: <input name="company" type="text" ng-model="company"></p>
+
+    <button ng-click="searchFunction()">Search</button>
+
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>High</th>
+            <th>Low</th>
+        </tr>
+
+        <tr ng-repeat="stock in stocks">
+            <td>{{ stock.date }}</td>
+            <td>{{ stock.open }}</td>
+            <td>{{ stock.close }}</td>
+            <td>{{ stock.high }}</td>
+            <td>{{ stock.low }}</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function studentController($scope, $http) {
+
+        $scope.company = "TCS";
+
+        $scope.searchFunction = function () {
+            var url = "search/trading";
+            url = url + "?company=" + $scope.company;
+
+            $http.get(url).then(function (response) {
+                $scope.stocks = response.data;
+            });
+        }
+    }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+</script>
+
+</body>
+</html>
