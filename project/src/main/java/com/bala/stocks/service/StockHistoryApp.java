@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class StockService {
+public class StockHistoryApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(StockService.class, args);
+        SpringApplication.run(StockHistoryApp.class, args);
     }
 
     @Bean
