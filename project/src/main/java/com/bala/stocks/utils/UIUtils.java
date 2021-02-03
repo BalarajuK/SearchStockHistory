@@ -11,7 +11,6 @@ public class UIUtils {
     public String getWelcomePage(){
         URL classPath = UIUtils.class.getResource("UIUtils.class");
         String path = classPath.getPath();
-       // return path.substring(0,path.indexOf("utils/UIUtils.class"))+"ui/stocks.html";
-        return "C:\\Balaraju\\OldLaptop\\Balaraju\\Programming\\repo\\gs-spring-boot\\complete\\src\\main\\java\\com\\bala\\stocks\\ui\\stocks.html";
+        return path.substring(0,path.indexOf("classes"))+"classes/static/index.html";
     }
 }

@@ -16,7 +16,7 @@ public class StockHistoryService {
 //    @Autowired
 //    RestTemplate restTemplate;
 
-    @RequestMapping("/")
+    @RequestMapping("/welcome")
     public String index() {
         return new StockData().getWelcomePageData();
         //return "Greetings from Spring Boot!";
